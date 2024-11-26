@@ -39,6 +39,12 @@ dependencies:
   collection: ^1.18.0
   flutter_credit_card: ^4.0.1
 
+  google_nav_bar: ^5.0.6
+  get: ^4.6.5
+  firebase_core: ^3.1.1
+  firebase_auth: ^5.1.1
+  google_sign_in: ^6.2.1
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
@@ -68,6 +74,8 @@ flutter:
      - lib/images/salads/
      - lib/images/drinks/
      - lib/images/desserts/
+     - lib/images/apple_logo.png
+     - lib/images/google_logo.png
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
