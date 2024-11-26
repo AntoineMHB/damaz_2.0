@@ -1,3 +1,4 @@
+import 'package:damaz/components/my_cart_tile.dart';
 import 'package:damaz/models/restaurant.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -10,12 +11,33 @@ class CartPage extends StatelessWidget {
     return Consumer<Restaurant>(
       builder: (context, restaurant, child) {
         // cart
-        final useCart = restaurant.cart;
+        final userCart = restaurant.cart;
 
         // scaffold UI
         return Scaffold(
           appBar: AppBar(
             title: Text("Cart"),
+            backgroundColor: Colors.transparent,
+            foregroundColor: Theme.of(context).colorScheme.inversePrimary,
+          ),
+          body: Column(
+            children: [
+              Expanded(
+                child: ListView.builder(
+                  itemCount: userCart.length,
+                  itemBuilder: (context, index) {
+                    
+                    // get individual cart item 
+                    final cartItem = userCart[index];
+
+                    // return cart tile UI
+                    return MyCartTile(cartItem: cartItem);
+                  }
+                    
+                  )
+                )
+                    
+            ],
           ),
         );
 
